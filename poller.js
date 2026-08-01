@@ -1,3 +1,4 @@
+import { insertAlert, closePool } from "./db.js";
 import Redis from "ioredis";
 
 const redis = new Redis(process.env.REDIS_URL);
@@ -135,6 +136,7 @@ async function checkOne(repo, category) {
 
   for (const a of alerts) {
     console.log(`ALERT: ${a}`);
+    await insertAlert(category, repo, category === "activity" ? "medium" : "high", a);
   }
 
   await redis.set(`repo:${repo}`, JSON.stringify(current));
@@ -162,5 +164,6 @@ async function runOnce() {
 
 runOnce().then(() => {
   console.log("Poll complete.");
+  closePool();
   redis.disconnect();
 });
