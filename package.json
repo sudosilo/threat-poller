@@ -1,15 +1,15 @@
 {
   "name": "threat-poller",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "module",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node api.js",
+    "poll": "node poller.js"
+  },
   "dependencies": {
     "ioredis": "^6.0.0",
     "pg": "^8.22.0"

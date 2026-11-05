@@ -6,6 +6,6 @@ It checks each watched repo on a schedule and sorts them into categories such as
 
 This app is checked every morning by Control Troll.
 
-Latest change. Created the threat intel poller with three category rules for watched repos. Alerts now save to Postgres so they persist between runs. Added a read API that returns the latest alerts for the dashboard.
+Latest change. Added routes for the watchlist, the catalog and site checks, with schema.sql for the new tables.
 
 See CHANGELOG.md for the full history.
