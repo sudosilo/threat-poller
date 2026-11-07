@@ -6,6 +6,6 @@ It checks each watched repo on a schedule and sorts them into categories such as
 
 This app is checked every morning by Control Troll.
 
-Latest change. Added routes for the watchlist, the catalog and site checks, with schema.sql for the new tables.
+Latest change. 2026-11-04, v2026.11.04. Added routes for the watchlist, the catalog and site checks, with a schema file for the new tables.
 
 See CHANGELOG.md for the full history.
